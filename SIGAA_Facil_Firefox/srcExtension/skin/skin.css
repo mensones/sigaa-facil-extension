@@ -1,9 +1,16 @@
 .sigaa_facil_dias {
 	color: #095E11;
 	font-weight: bold;
+	white-space: nowrap;
 }
 
 .sigaa_facil_horas {
 	color: #7D6913;
 	font-weight: bold;
+	white-space: nowrap;
+}
+
+.sigaa_facil_separador {
+	background: grey;
+	height: 1px;
 }
