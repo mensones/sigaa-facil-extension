@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://sigaafacil/skin/skin.css" type="text/css"?> 
+<!-- <!DOCTYPE sigaafacil SYSTEM "chrome://sigaafacil/locale/translations.dtd"> -->
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		<script src="sigaafacil.js" />
+		<!-- 
+		<statusbar id="status-bar">
+			<statusbarpanel label="SIGAA Fácil" tooltiptext="SIGAA Fácil" onclick="sigaafacil.run()" />
+		</statusbar>
+ 		-->
+		<menupopup id="menu_ToolsPopup">
+			<menu label="SIGAA Fácil">
+				<menupopup>
+					<menuitem label="Opções" oncommand="window.openDialog('chrome://sigaafacil/content/options.xul', 'SIGAA_Facil_Options', 'centerscreen');"/>
+					<menuitem label="Sobre..." oncommand="window.openDialog('chrome://sigaafacil/content/about.xul', 'SIGAA_Facil_About', 'centerscreen');"/> 
+				</menupopup>
+			</menu>
+		</menupopup>
+</overlay>
