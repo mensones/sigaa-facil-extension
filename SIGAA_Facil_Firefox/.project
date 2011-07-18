@@ -13,5 +13,6 @@
 	</buildSpec>
 	<natures>
 		<nature>org.xulbooster.eclipse.xb.xulNature</nature>
+		<nature>org.xulbooster.eclipse.xb.xulNature</nature>
 	</natures>
 </projectDescription>
