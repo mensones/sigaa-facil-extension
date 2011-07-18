@@ -5,11 +5,12 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="sigaafacil@rafaelcds"
                    em:name="SIGAA Fácil"
-                   em:version="1.0"
+                   em:version="1.1"
                    em:creator="Rafael Sales (rafaelcds at gmail.com)"
                    em:description="SIGAA Fácil é uma extensão para Mozilla Firefox desenvolvida com objetivo de facilitar a visualização dos horários do SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas."
                    em:homepageURL="http://lia.ufc.br/~rafaelcds/sigaafacil"
-                   em:optionsURL="chrome://sigaafacil/content/options.xul">
+                   em:optionsURL="chrome://sigaafacil/content/options.xul"
+                   em:type="2">
     <em:targetApplication RDF:resource="rdf:#$ZqdRm"/>
   </RDF:Description>
   <RDF:Description RDF:about="rdf:#$ZqdRm"
