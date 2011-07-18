@@ -30,6 +30,8 @@ var sigaafacil = function () {
 			}
 		},
 		
+		REGEX_HORARIO: /([1-7]+)([MTN])([0-9]+)/,
+		
 		TABELA_DIAS: [null, "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
 		
 		/**
@@ -98,8 +100,8 @@ var sigaafacil = function () {
 		        var arrayHorarios = horarios.split(" "); //Transforma a string em array de strings
 		        for (var i = 0; i < arrayHorarios.length; i++) {
 		            var h = arrayHorarios[i].replace(/[ ]/g, ""); //Remove os espaços
-		            if (h.length) {
-			            var partes = /([1-7]+)([MTN])([0-9]+)/.exec(h);
+		            if (h.length && this.REGEX_HORARIO.test(h)) {
+			            var partes = this.REGEX_HORARIO.exec(h);
 			            var dias = sigaafacil.formatarDias(partes[1]);
 			            var turno = partes[2];
 			            var horas = sigaafacil.formatarHoras(partes[3], turno);
@@ -108,10 +110,10 @@ var sigaafacil = function () {
 //			            horas = horas.fontcolor("#7D6913");
 			            dias = "<span class='sigaa_facil_dias'>" + dias + "</span>"; 
 			            horas = "<span class='sigaa_facil_horas'>" + horas + "</span>";
-			            horariosFormatado += "<br/>" + dias + "<br/>" + horas;
+			            horariosFormatado += dias + "<br/>" + horas + "<br/>";
 		            }
 		        }
-			return horarios + horariosFormatado;
+			return horariosFormatado + "<div class='sigaa_facil_separador'></div>" + horarios;
 		},
 		
 		run: function () {
@@ -174,7 +176,6 @@ var sigaafacil = function () {
 					if (cols.length > indiceTDHorario) {
 		                var tdHorario = cols[indiceTDHorario];
 		                tdHorario.style.textAlign = "center";
-		                tdHorario.setAttribute("nowrap", "nowrap");
 						tdHorario.innerHTML = sigaafacil.formatarHorarios(tdHorario.innerHTML);
 					}
 				}
