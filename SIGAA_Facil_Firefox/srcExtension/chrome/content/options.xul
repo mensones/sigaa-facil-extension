@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<prefwindow 
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="SIGAA Fácil - Opções">
+ 
+	<prefpane label="SIGAA Fácil - Opções">
+		<preferences>
+			<preference id="sigaa-facil-autorun" name="extensions.sigaafacil.autorun" type="bool"/>
+			<preference id="sigaa-facil-restringir-dominios" name="extensions.sigaafacil.restringir-dominios" type="bool"/>
+			<preference id="sigaa-facil-lista-dominios" name="extensions.sigaafacil.lista-dominios" type="string"/>
+		</preferences>
+		
+		<groupbox>
+			<caption label="Opções"/>
+			<vbox>
+				<grid>
+					<columns flex="1"></columns>
+					<columns flex="4"></columns>
+					<rows>
+						<row>
+							<checkbox id="autorun" preference="sigaa-facil-autorun"/>
+							<label control="autorun" value="Ativar o SIGAA Fácil"/>
+						</row>
+						<row>
+							<checkbox id="restringir-dominios" preference="sigaa-facil-restringir-dominios"/>
+							<label control="restringir-dominios" value="Ativar SIGAA Fácil somente para os domínios abaixo"
+								tooltiptext="Ative esta opção se estiver tendo conflitos com outros sites senão o SIGAA"/>
+						</row>
+					</rows>
+				</grid>
+				
+				<label control="listaDominios" value="Domínios* para ativar o SIGAA Fácil:"/>
+				<textbox id="listaDominios" preference="sigaa-facil-lista-dominios" multiline="true" rows="5"/>
+				<description>*Domínios separados por linha</description>
+			</vbox>
+		</groupbox>	
+		
+	</prefpane>
+ 
+</prefwindow>
