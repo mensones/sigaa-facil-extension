@@ -1,0 +1,1 @@
+SIGAA Fácil é uma extensão para o Mozilla Firefox que tem como objetivo melhorar a experiência do usuário no uso do SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas
